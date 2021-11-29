@@ -4,8 +4,11 @@ require "site_prism"
 require "rspec"
 require "cucumber"
 require "faker"
+require_relative "helper.rb"
 
 BROWSER = ENV["BROWSER"]
+
+World(Helper)
 
 Capybara.register_driver :selenium do |app|
   if BROWSER.eql?("chrome")
