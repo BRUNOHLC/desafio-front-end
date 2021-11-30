@@ -9,6 +9,6 @@ Funcionalidade: Acessar o site e fazer um cadastro de cliente
 
 Cenario: Concluir um cadastro com sucesso
 
-Dado que o usuario na esteja na pagina para criar uma nova conta
+Quando que o usuario na esteja na pagina para criar uma nova conta
 Quando preencha todos os campos 
 Entao verifica-se se o cadastro foi concluido com sucesso

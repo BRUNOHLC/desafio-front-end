@@ -1,4 +1,4 @@
-Dado("que o usuario na esteja na pagina para criar uma nova conta") do
+Quando("que o usuario na esteja na pagina para criar uma nova conta") do
   visit "/index.php?controller=authentication&back=my-account"
 end
 
