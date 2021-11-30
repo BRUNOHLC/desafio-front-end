@@ -16,14 +16,11 @@
         Capybara
         Cucumber
         Siteprism
-        Selenium_webdriver
-        
-
-
+        Selenium_webdriver     
 
     *Instrução de Execução
 
-        Para que o projeto rode a opção desejada, é necessario iniciar o seguinte comando no terminal. (cucumber -t@...) e adicionar após "@" a tag que qual deseja iniciar a automação, as tags estão dentro de cada arquivo, dentro da pasta "specs".
+        Para que o projeto rode a opção desejada, é necessario iniciar o seguinte comando no terminal. bundler exec cucumber. Caso queria rodar um teste em especifico escolha tag que qual deseja iniciar a automação, as tags estão dentro de cada arquivo, dentro da pasta "specs".
 
         O projeto rodará no navegador Chrome. Para alterar navegador de sua preferencia, basta alterar o nome dentro do arquivo (cucumber.yml). 
 

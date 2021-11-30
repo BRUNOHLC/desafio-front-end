@@ -8,7 +8,7 @@ class HomePageCadastro < SitePrism::Page
 
   #Produto
   element :produto1, "#homefeatured > li:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)"
-  element :produto2, "#homefeatured > li:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)"
+  element :produto2, "#homefeatured > li:nth-child(" + rand(6).to_s + ") > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)"
   element :bt_adicionar, " #add_to_cart"
   element :bt_continuar_comprando, "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > span > span > i"
   element :pagina_inicial, "#header_logo > a > img"
@@ -23,7 +23,7 @@ class HomePageCadastro < SitePrism::Page
   #Metodos
 
   def Selecionar_Produtos
-    produto1.click
+    produto2.click
     bt_adicionar.click
     bt_check_out.click
     bt_check_resumo.click

@@ -1,4 +1,6 @@
 require "capybara/cucumber"
+require "cucumber"
+require "capybara"
 require "selenium-webdriver"
 require "site_prism"
 require "rspec"
@@ -14,7 +16,11 @@ Capybara.register_driver :selenium do |app|
   if BROWSER.eql?("chrome")
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   elsif BROWSER.eql?("chrome_headless")
-    Capybara::Selenium::Driver.new(app, :browser => :chrome, desired_capabilites: Selenium::WebDriver::Remote::Capabilities.chrome("chromeOptions" => { "args" => ["--headless", "disable-gpu"] }))
+    Capybara::Selenium::Driver.new(app, :browser => :chrome,
+                                        desired_capabilites: Selenium::WebDriver::Remote::Capabilities.chrome(
+                                          "chromeOptions" => { "args" => ["--headless", "disable-gpu"] },
+
+                                        ))
   elsif BROWSER.eql?("firefox")
     Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette => true)
   elsif BROWSER.eql?("firefox_headless")
