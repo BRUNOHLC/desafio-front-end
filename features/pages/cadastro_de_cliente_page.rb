@@ -32,7 +32,6 @@ class HomePageCadastro < SitePrism::Page
 
   #metodos
   def nova_conta
-    sleep (2)
     email_cadastral.set Faker::Internet.email
     bt_criar_conta.click
     check_genero_masculino.click
@@ -45,7 +44,6 @@ class HomePageCadastro < SitePrism::Page
     ano_nascimento.click
     check_ofertas.click
     check_assinatura.click
-    sleep (2)
   end
 
   def nova_conta_endereco
